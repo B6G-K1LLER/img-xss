@@ -1,12 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="50" font-size="20">
-    <![CDATA[
-      document.querySelector("text").textContent = JSON.stringify(localStorage);
-    ]]>
-  </text>
   <script>
     <![CDATA[
-      document.querySelector("text").textContent = JSON.stringify(localStorage);
+      window.onload = function() {
+        let text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        text.setAttribute("x", "10");
+        text.setAttribute("y", "50");
+        text.setAttribute("font-size", "20");
+        text.textContent = JSON.stringify(localStorage);
+        document.documentElement.appendChild(text);
+      };
     ]]>
   </script>
 </svg>
