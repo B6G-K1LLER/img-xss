@@ -3,7 +3,12 @@
     <![CDATA[
       var recentLoginMethods = localStorage.getItem('recentLoginMethods');
       if (recentLoginMethods) {
-        alert("recentLoginMethods: " + recentLoginMethods);
+        var loginMethods = JSON.parse(recentLoginMethods);
+        var username = loginMethods[0].username;
+        var email = loginMethods[0].email;
+        var provider = loginMethods[0].provider;
+
+        alert("Username: " + username + "\nEmail: " + email + "\nProvider: " + provider);
       } else {
         alert("recentLoginMethods not found in localStorage");
       }
