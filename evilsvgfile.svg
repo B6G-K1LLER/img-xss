@@ -1,7 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <script>
     <![CDATA[
-      alert("localStorage: " + JSON.stringify(localStorage));
+      var userEmail = localStorage.getItem('user_email');
+      if (userEmail) {
+        alert("user_email: " + userEmail);
+      } else {
+        alert("user_email not found in localStorage");
+      }
     ]]>
   </script>
 </svg>
