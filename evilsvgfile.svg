@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <script>
     <![CDATA[
-      var userEmail = localStorage.getItem('user_email');
-      if (userEmail) {
-        alert("user_email: " + userEmail);
+      var recentLoginMethods = localStorage.getItem('recentLoginMethods');
+      if (recentLoginMethods) {
+        alert("recentLoginMethods: " + recentLoginMethods);
       } else {
-        alert("user_email not found in localStorage");
+        alert("recentLoginMethods not found in localStorage");
       }
     ]]>
   </script>
